@@ -1,0 +1,292 @@
+
+:<!DOCTYPE html>
+<html lang="en">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel MonteCarlo | Página Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="logo-container">
+            <img src="img/imagotipo.png" alt="Gran Hotel Montecarlo Acapulco" class="logo" />
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="nav-links">
+            <a href="Quienessomos.html">¿Quienes Somos?</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="atractivos.html">Atractivos turisticos</a>
+            <a href="galeria.html">Galería</a>
+        </nav>
+
+        <div class="acciones">
+            <a href="https://wa.me/7443220875" class="btn-reserva" target="_blank"><i class="fab fa-whatsapp"></i> Reserva ahora</a>
+            <a href="https://www.facebook.com/GHMCacapulco/about"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/granhotelmontecarlo?igsh=MTM2aXB4empzb3phdg=="><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+
+
+    <!-- Sección con imagen de fondo -->
+    <section class="hero">
+        <div class="contenido-hero">
+            
+        </div>
+    </section>
+    <section class="experiencia" id="inicio">
+       <div class="container-experiencia" id="Nosotros">
+        <h2 class="titulo12" style="font-size: 25px;">La Experiencia Montecarlo</h2>
+            <p class="Resumen">
+                En este Oasis de relajación y disfrute, nos esforzamos para hacer que cada momento sea inolvidable. Desde nuestras habitaciones diseñadas para el confort hasta nuestros servicios personalizados, cada detalle ha sido pensado para hacerte sentir como en casa, explora nuestras instalaciones y descubre porque somos el destino perfecto para tus próximas vacaciones.
+            </p>
+            <div class="experiencia-grid">
+                <div class="experiencia-card">
+                    <video class="video-experiencia" autoplay muted loop controls width="100%">
+                        <source src="img/WhatsApp Video 2025-06-12 at 11.41.23 AM.mp4" type="video/mp4">
+                    </video>
+                    <!--<img src="img/habi1.jpg" alt="Spa y relajación">-->
+                    <h3>Comodidad
+                    
+                </div>
+                <div class="experiencia-card">
+                    <video class="video-experiencia" autoplay muted loop controls width="100%">
+                        <source src="img/WhatsApp Video 2025-06-12 at 11.42.06 AM.mp4" type="video/mp4">
+                    </video>
+                    <h3>Aventuras</h3>
+                    
+                </div>
+                <div class="experiencia-card">
+                    <video class="video-experiencia" autoplay muted loop controls width="100%">
+                        <source src="img/diversiones.mp4" type="video/mp4">
+                    </video>
+                    <h3>Diversiones</h3>
+                   
+                </div>
+            </div>
+        </div>
+    </section>
+    <br><br>
+
+    <section id="contacto">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="img/logo horizontal montecarlo.png" alt="Gran Hotel Montecarlo" class="logo1" />
+                    <br>
+                    <p class="direccion"> Av. Gran Vía Tropical 9, Las Playas,<br>
+                        C.P. 39390 Acapulco de Juárez, Gro.</p>
+                </div>
+                <div class="footer-right">
+                    <h4>Síguenos En Redes</h4><br>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/GHMCacapulco/about" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/granhotelmontecarlo?igsh=MTM2aXB4empzb3phdg=="
+                            target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <p><strong>Teléfono</strong><br>744 322 0875</p>
+                    <br>
+                    <p><strong>Correo electrónico</strong><br>
+                        <a
+                            href="mailto:montecarloacapulco@gmail.com">montecarloacapulco@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Gran Hotel Montecarlo Acapulco
+                </p>
+            </div>
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/5217443220875" class="whatsapp" target="_blank"
+                title="¿Necesitas ayuda? ¡Escríbenos!">
+                <img src="img/w.webp" alt="WhatsApp">
+            </a>
+        </footer>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+    </script>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("navbar-hidden"); // Mostrar menú
+            } else {
+                navbar.classList.add("navbar-hidden"); // Ocultar menú
+            }
+
+            prevScrollPos = currentScrollPos;
+        });
+    </script>
+
+
+    <!-- Tu contenido aquí -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById('menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', () => {
+                    toggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+    <script>
+        // Lista de páginas con imagen, título y texto
+        const paginas = [
+          {
+            titulo: "Alberca",
+            texto:
+              "Un lugar ideal para relajarse, cuenta con un sector para niños, camastros y sombrillas para drisfrutar del sol y la sombra.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Wi-Fi",
+            texto:
+              "Disfruta de una conexión a Wi-Fi gratuito y confiable con cobertura en las habitaciones, la alberca y espacios comunes del Hotel.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Estacionamiento",
+            texto:
+              "Estacionamiento vigilado las 24 horas, con acceso controlado desde recepcion para garantizar la protección.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.09.41 AM.jpeg",
+          },
+          {
+            titulo: "T.V Con Cable",
+            texto:
+              "T.V Con cable todas las habitaciones para que puedas disfrutar de tus programas favoritos.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.07.32 AM.jpeg",
+          },
+          {
+            titulo: "Aire Acondicionado",
+            texto:
+              "Mantén un ambiente fresco y relajante en tu habitación con nuestro sistema de aire acondicionado para que puedas descansar y recargar energías.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Restaurante",
+            texto:
+              "Variedad de platillos para que te deleites con tus sabores favoritos en un entorno moderno y satisfecho.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Refrigerador",
+            texto:
+              "Mantén tus alimentos frescos y saludables en nuestro refrigerador, diseñado para ofrecer un almacenamiento seguro y eficiente.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Terraza",
+            texto:
+              "Una terraza perfecta para relajarte y disfrutar del aire libre.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Show En Vivo Los Fines De Semana",
+            texto:
+              "Nuestro show en vivo los fines de semana son el complemento perfecto para una estancia inolvidable en nuestro Hotel Montecarlo.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          }
+        ];
+    
+        let paginaActual = 0;
+    
+        function cambiarContenido(direccion) {
+          paginaActual += direccion;
+    
+          // Bucle circular
+          if (paginaActual < 0) paginaActual = paginas.length - 1;
+          if (paginaActual >= paginas.length) paginaActual = 0;
+    
+          const nueva = paginas[paginaActual];
+          document.getElementById("titulo-monte").innerText = nueva.titulo;
+          document.getElementById("texto-monte").innerHTML = nueva.texto;
+          document.getElementById("imagen-monte").src = nueva.imagen;
+        }
+      </script>
+      <script>
+        const seccionesAlt = [
+          {
+            titulo: "Habitacion 2 Personas",
+            texto: "Cuenta Con Una Cama Matrimonial.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"
+          },
+          {
+            titulo: "Habitacion 4 Personas",
+            texto: "Cuenta Con Dos Camas Matrimoniales.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"
+          },
+          {
+            titulo: "Habitacion 5 Personas",
+            texto: "Cuenta Con Dos Camas Matrimoniales Y Una Individual.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"
+          },
+          {
+
+          titulo: "Habitacion 6 Personas",
+            texto: "Cuenta Con Tres Camas Matrimoniales.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"  
+          }
+        ];
+    
+    
+        let indiceAlt = 0;
+    
+        function cambiarAlt(direccion) {
+          indiceAlt += direccion;
+          if (indiceAlt < 0) indiceAlt = seccionesAlt.length - 1;
+          if (indiceAlt >= seccionesAlt.length) indiceAlt = 0;
+    
+          const actual = seccionesAlt[indiceAlt];
+          document.getElementById("titulo-alt").innerText = actual.titulo;
+          document.getElementById("texto-alt").innerHTML = actual.texto;
+          document.getElementById("imagen-alt").src = actual.imagen;
+        }
+      </script>
+</body>
+</html>

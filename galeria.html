@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel MonteCarlos | Página Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/imagotipo.png" alt="Gran Hotel Montecarlo Acapulco" class="logo" />
+            </a>
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="Quienessomos.html">¿Quienes Somos?</a>
+            <a href="servicios.html">Servicios</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="atractivos.html">Atractivos turisticos</a>
+        </nav>
+
+        <div class="acciones">
+            <a href="https://wa.me/7443220875" class="btn-reserva" target="_blank"><i class="fab fa-whatsapp"></i> Reserva ahora</a>
+            <a href="https://www.facebook.com/GHMCacapulco/about"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/granhotelmontecarlo?igsh=MTM2aXB4empzb3phdg=="><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+    <br><br><br><br><br><br><br><br>
+    <section class="galeria" id="Galeria">
+        <div class="grid-galeria">
+            <img src="img/galeria9.jpg" alt="Imagen 1">
+            <img src="img/WhatsApp Image 2025-06-12 at 11.06.49 AM.jpeg" alt="Imagen 2">
+            <img src="img/WhatsApp Image 2025-06-12 at 11.07.07 AM.jpeg" alt="Imagen 3">
+            <img src="img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg" alt="Imagen 4">
+            <img src="img/WhatsApp Image 2025-06-12 at 11.09.41 AM.jpeg" alt="Imagen 5">
+            <img src="img/6personas.jpg" alt="Imagen 6">
+            <img src="img/WhatsApp Image 2025-06-12 at 11.11.13 AM.jpeg" alt="Imagen 7">
+            <img src="img/galeria11.jpg" alt="Imagen 8">
+            <img src="img/galeria10.jpg" alt="Imagen 9">
+            <img src="img/galeria.jpeg" alt="Imagen 10">
+            <img src="img/WhatsApp Image 2025-06-12 at 11.39.25 AM.jpeg" alt="Imagen 11">
+            <img src="img/terraza.jpeg" alt="Imagen 12">
+        </div>
+    </section><br><br>
+
+    <section id="contacto">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="img/logo horizontal montecarlo.png" alt="Gran Hotel Montecarlo" class="logo1" />
+                    <br>
+                       <p class="direccion"> Av. Gran Vía Tropical 9, Las Playas,<br>
+                        C.P. 39390 Acapulco de Juárez, Gro.</p>
+                </div>
+                <div class="footer-right">
+                    <h4>Síguenos En Redes</h4><br>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/GHMCacapulco/about" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/granhotelmontecarlo?igsh=MTM2aXB4empzb3phdg=="
+                            target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <p><strong>Teléfono</strong><br>744 322 0875</p>
+                    <br>
+                    <p><strong>Correo electrónico</strong><br>
+                        <a
+                            href="mailto:montecarloacapulco@gmail.com">montecarloacapulco@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Gran Hotel Montecarlo Acapulco
+                </p>
+            </div>
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/5217443220875" class="whatsapp" target="_blank"
+                title="¿Necesitas ayuda? ¡Escríbenos!">
+                <img src="img/w.webp" alt="WhatsApp">
+            </a>
+        </footer>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+    </script>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("navbar-hidden"); // Mostrar menú
+            } else {
+                navbar.classList.add("navbar-hidden"); // Ocultar menú
+            }
+
+            prevScrollPos = currentScrollPos;
+        });
+    </script>
+
+
+    <!-- Tu contenido aquí -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById('menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', () => {
+                    toggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+    <script>
+        // Lista de páginas con imagen, título y texto
+        const paginas = [
+          {
+            titulo: "Alberca",
+            texto:
+              "Un lugar ideal para relajarse, cuenta con un sector para niños, camastros y sombrillas para drisfrutar del sol y la sombra.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Wi-Fi",
+            texto:
+              "Disfruta de una conexión a Wi-Fi gratuito y confiable con cobertura en las habitaciones, la alberca y espacios comunes del Hotel",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Estacionamiento",
+            texto:
+              "Estacionamiento vigilado las 24 horas, con acceso controlado desde recepcion para garantizar la protección",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.09.41 AM.jpeg",
+          },
+          {
+            titulo: "T.V Con Cable",
+            texto:
+              "El hotel ofrece buffet internacional, snacks y bebidas ilimitadas. Viva una experiencia culinaria sin límites con nuestros chefs especializados.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.07.32 AM.jpeg",
+          },
+          {
+            titulo: "Aire Acondicionado",
+            texto:
+              "Es el único hotel dentro de la Bahía, que le ofrece con un solo costo la increíble y real experiencia <strong>¡Todo Incluido!</strong>, cuenta con 251 habitaciones con vista frontal o parcial a la bahía distribuidas en dos torres.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Restaurante",
+            texto:
+              "Es el único hotel dentro de la Bahía, que le ofrece con un solo costo la increíble y real experiencia <strong>¡Todo Incluido!</strong>, cuenta con 251 habitaciones con vista frontal o parcial a la bahía distribuidas en dos torres.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Refrigerador",
+            texto:
+              "Es el único hotel dentro de la Bahía, que le ofrece con un solo costo la increíble y real experiencia <strong>¡Todo Incluido!</strong>, cuenta con 251 habitaciones con vista frontal o parcial a la bahía distribuidas en dos torres.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Terraza",
+            texto:
+              "Es el único hotel dentro de la Bahía, que le ofrece con un solo costo la increíble y real experiencia <strong>¡Todo Incluido!</strong>, cuenta con 251 habitaciones con vista frontal o parcial a la bahía distribuidas en dos torres.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          },
+          {
+            titulo: "Show En Vivo Los Fines De Semana",
+            texto:
+              "Es el único hotel dentro de la Bahía, que le ofrece con un solo costo la increíble y real experiencia <strong>¡Todo Incluido!</strong>, cuenta con 251 habitaciones con vista frontal o parcial a la bahía distribuidas en dos torres.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.04.30 AM.jpeg",
+          }
+        ];
+    
+        let paginaActual = 0;
+    
+        function cambiarContenido(direccion) {
+          paginaActual += direccion;
+    
+          // Bucle circular
+          if (paginaActual < 0) paginaActual = paginas.length - 1;
+          if (paginaActual >= paginas.length) paginaActual = 0;
+    
+          const nueva = paginas[paginaActual];
+          document.getElementById("titulo-monte").innerText = nueva.titulo;
+          document.getElementById("texto-monte").innerHTML = nueva.texto;
+          document.getElementById("imagen-monte").src = nueva.imagen;
+        }
+      </script>
+      <script>
+        const seccionesAlt = [
+          {
+            titulo: "Habitacion 2 Personas",
+            texto: "Descubre una experiencia visual única desde nuestra terraza con vista total a la bahía de Acapulco. Perfecta para relajarte y tomar fotografías inolvidables.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"
+          },
+          {
+            titulo: "Habitacion 4 Personas",
+            texto: "Nuestras suites ofrecen comodidad y elegancia con amenidades modernas, ideales para una escapada romántica o un viaje en familia.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"
+          },
+          {
+            titulo: "Habitacion 5 Personas",
+            texto: "Disfruta del sol en nuestras albercas con bar acuático y zona de camastros. Ambiente perfecto para descansar o convivir.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"
+          },
+          {
+
+          titulo: "Habitacion 6 Personas",
+            texto: "Disfruta del sol en nuestras albercas con bar acuático y zona de camastros. Ambiente perfecto para descansar o convivir.",
+            imagen: "img/WhatsApp Image 2025-06-12 at 11.08.05 AM.jpeg"  
+          }
+        ];
+    
+        let indiceAlt = 0;
+    
+        function cambiarAlt(direccion) {
+          indiceAlt += direccion;
+          if (indiceAlt < 0) indiceAlt = seccionesAlt.length - 1;
+          if (indiceAlt >= seccionesAlt.length) indiceAlt = 0;
+    
+          const actual = seccionesAlt[indiceAlt];
+          document.getElementById("titulo-alt").innerText = actual.titulo;
+          document.getElementById("texto-alt").innerHTML = actual.texto;
+          document.getElementById("imagen-alt").src = actual.imagen;
+        }
+      </script>
+</body>
+</html>

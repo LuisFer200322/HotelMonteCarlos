@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel MonteCarlos | Página Oficial</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Open+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+    <!-- Navbar -->
+    <header class="navbar" id="navbar">
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="img/imagotipo.png" alt="Gran Hotel Montecarlo Acapulco" class="logo" />
+            </a>
+        </div>
+
+        <!-- Botón hamburguesa -->
+        <div class="menu-toggle" id="menu-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <!-- Navegación principal -->
+        <nav class="nav-links">
+            <a href="index.html">Inicio</a>
+            <a href="Quienessomos.html">¿Quienes Somos?</a>
+            <a href="ubicacion.html">Ubicación</a>
+            <a href="atractivos.html">Atractivos turisticos</a>
+            <a href="galeria.html">Galería</a>
+        </nav>
+
+        <div class="acciones">
+            <a href="https://wa.me/7443220875" class="btn-reserva" target="_blank"><i class="fab fa-whatsapp"></i> Reserva ahora</a>
+            <a href="https://www.facebook.com/GHMCacapulco/about"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/granhotelmontecarlo?igsh=MTM2aXB4empzb3phdg=="><i
+                    class="fab fa-instagram"></i></a>
+        </div>
+    </header>
+<br><br><br><br><br><br><br>
+
+    <section class="seccion-monte">
+        <div class="contenedor-monte">
+          <!-- Imagen dinámica -->
+          <div class="imagen-monte">
+            <img id="imagen-monte" src="img/vision.jpeg" alt="Imagen Hotel" />
+          </div>
+    
+          <!-- Contenido dinámico -->
+          <div class="contenido-monte">
+            <h2 id="titulo-monte">Servicios Del Hotel</h1>
+          
+            <p id="texto-monte">
+            Para que tu estancia te haga sentir como en Casa
+            </p>
+            <div class="botones-navegacion">
+                    
+              <button class="btn-monte" onclick="cambiarContenido(-1)">← Anterior</button>
+              <button class="btn-monte" onclick="cambiarContenido(1)">Siguiente →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+       <!-- Nueva sección 3 -->
+      <section class="seccion-alt">
+        <div class="contenedor-alt">
+          <!-- Imagen a la derecha -->
+          <div class="imagen-alt">
+            <img id="imagen-alt" src="img/hab.jpg" alt="Imagen Alternativa" />
+          </div>
+    
+          <!-- Contenido a la izquierda -->
+          <div class="contenido-alt">
+            <h2 id="titulo-alt">Habitaciones Montecarlo</h2>
+            <p id="texto-alt">
+            Elige Tu Comodidad
+            </p>
+            <div class="botones-alt">
+              <button class="btn-alt" onclick="cambiarAlt(-1)">← Anterior</button>
+              <button class="btn-alt" onclick="cambiarAlt(1)">Siguiente →</button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    <section id="contacto">
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-left">
+                    <img src="img/logo horizontal montecarlo.png" alt="Gran Hotel Montecarlo" class="logo1" />
+                    <br>
+                     <p class="direccion"> Av. Gran Vía Tropical 9, Las Playas,<br>
+                        C.P. 39390 Acapulco de Juárez, Gro.</p>
+                </div>
+                <div class="footer-right">
+                    <h4>Síguenos En Redes</h4><br>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/GHMCacapulco/about" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/granhotelmontecarlo?igsh=MTM2aXB4empzb3phdg=="
+                            target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                    <br>
+                    <p><strong>Teléfono</strong><br>744 322 0875</p>
+                    <br>
+                    <p><strong>Correo electrónico</strong><br>
+                        <a
+                            href="mailto:montecarloacapulco@gmail.com">montecarloacapulco@gmail.com</a>
+                    </p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2025 Gran Hotel Montecarlo
+                    Acapulco
+                </p>
+            </div>
+            <!-- Botón de WhatsApp -->
+            <a href="https://wa.me/5217443220875" class="whatsapp" target="_blank"
+                title="¿Necesitas ayuda? ¡Escríbenos!">
+                <img src="img/w.webp" alt="WhatsApp">
+            </a>
+        </footer>
+    </section>
+
+    <script>
+        let currentSlide = 0;
+        const slides = document.querySelectorAll(".slide");
+        function showSlide(index) {
+            slides.forEach(slide => slide.classList.remove("active"));
+            slides[index].classList.add("active");
+        }
+        function moveSlide(direction) {
+            currentSlide += direction;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            showSlide(currentSlide);
+        }
+    </script>
+    <script>
+        let prevScrollPos = window.pageYOffset;
+        const navbar = document.getElementById("navbar");
+
+        window.addEventListener("scroll", () => {
+            let currentScrollPos = window.pageYOffset;
+
+            if (prevScrollPos > currentScrollPos) {
+                navbar.classList.remove("navbar-hidden"); // Mostrar menú
+            } else {
+                navbar.classList.add("navbar-hidden"); // Ocultar menú
+            }
+
+            prevScrollPos = currentScrollPos;
+        });
+    </script>
+
+
+    <!-- Tu contenido aquí -->
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const toggle = document.getElementById('menu-toggle');
+            const navLinks = document.querySelector('.nav-links');
+
+            if (toggle && navLinks) {
+                toggle.addEventListener('click', () => {
+                    toggle.classList.toggle('active');
+                    navLinks.classList.toggle('active');
+                });
+            }
+        });
+    </script>
+    <script>
+          // Lista de páginas con imagen, título y texto
+        const paginas = [
+          {
+            titulo: "Alberca",
+            texto:
+              "Un lugar ideal para relajarse, cuenta con un sector para niños, camastros y sombrillas para drisfrutar del sol y la sombra.",
+            imagen: "img/alberca.jpeg",
+          },
+          {
+            titulo: "Wi-Fi",
+            texto:
+              "Disfruta de una conexión a Wi-Fi gratuito y confiable con cobertura en las habitaciones, la alberca y espacios comunes del Hotel.",
+            imagen: "img/wifi.jpg",
+          },
+          {
+            titulo: "Estacionamiento",
+            texto:
+              "Estacionamiento vigilado las 24 horas, con acceso controlado desde recepcion para garantizar la protección.",
+            imagen: "img/estacionamiento.jpeg",
+          },
+          {
+            titulo: "T.V Con Cable",
+            texto:
+              "T.V Con cable todas las habitaciones para que puedas disfrutar de tus programas favoritos.",
+            imagen: "img/tele.jpeg",
+          },
+          {
+            titulo: "Aire Acondicionado",
+            texto:
+              "Mantén un ambiente fresco y relajante en tu habitación con nuestro sistema de aire acondicionado para que puedas descansar y recargar energías.",
+            imagen: "img/aire2.jpg",
+          },
+          {
+            titulo: "Restaurante",
+            texto:
+              "Variedad de platillos para que te deleites con tus sabores favoritos en un entorno moderno y satisfecho.",
+            imagen: "img/restaurante.jpeg",
+          },
+          {
+            titulo: "Refrigerador",
+            texto:
+              "Mantén tus alimentos frescos y saludables en nuestro refrigerador, diseñado para ofrecer un almacenamiento seguro y eficiente.",
+            imagen: "img/refrigerador.jpg",
+          },
+          {
+            titulo: "Terraza",
+            texto:
+              "Una terraza perfecta para relajarte y disfrutar del aire libre.",
+            imagen: "img/terraza.jpeg",
+          },
+          {
+            titulo: "Show En Vivo Los Fines De Semana",
+            texto:
+              "Nuestro show en vivo los fines de semana son el complemento perfecto para una estancia inolvidable en nuestro Gran Hotel Montecarlo.",
+            imagen: "img/show.jpg",
+          }
+        ];
+    
+        let paginaActual = 0;
+    
+        function cambiarContenido(direccion) {
+          paginaActual += direccion;
+    
+          // Bucle circular
+          if (paginaActual < 0) paginaActual = paginas.length - 1;
+          if (paginaActual >= paginas.length) paginaActual = 0;
+    
+          const nueva = paginas[paginaActual];
+          document.getElementById("titulo-monte").innerText = nueva.titulo;
+          document.getElementById("texto-monte").innerHTML = nueva.texto;
+          document.getElementById("imagen-monte").src = nueva.imagen;
+        }
+      </script>
+      <script>
+        const seccionesAlt = [
+          {
+            titulo: "Habitacion 2 Personas",
+            texto: "Cuenta Con Una Cama Matrimonial.",
+            imagen: "img/1cama1.jpeg"
+          },
+          {
+            titulo: "Habitacion 4 Personas",
+            texto: "Cuenta Con Dos Camas Matrimoniales.",
+            imagen: "img/2camas.jpeg"
+          },
+          {
+            titulo: "Habitacion 5 Personas",
+            texto: "Cuenta Con Dos Camas Matrimoniales Y Una Individual.",
+            imagen: "img/5per.jpg"
+          },
+          {
+
+          titulo: "Habitacion 6 Personas",
+            texto: "Cuenta Con Tres Camas Matrimoniales.",
+            imagen: "img/6personas2.jpg"  
+          }
+        ];
+    
+        let indiceAlt = 0;
+    
+        function cambiarAlt(direccion) {
+          indiceAlt += direccion;
+          if (indiceAlt < 0) indiceAlt = seccionesAlt.length - 1;
+          if (indiceAlt >= seccionesAlt.length) indiceAlt = 0;
+    
+          const actual = seccionesAlt[indiceAlt];
+          document.getElementById("titulo-alt").innerText = actual.titulo;
+          document.getElementById("texto-alt").innerHTML = actual.texto;
+          document.getElementById("imagen-alt").src = actual.imagen;
+        }
+      </script>
+</body>
+</html>
